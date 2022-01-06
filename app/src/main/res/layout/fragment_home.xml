@@ -19,10 +19,11 @@
             android:orientation="horizontal"
             android:padding="16dp">
 
-            <ImageView
+            <ImageButton
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:adjustViewBounds="true"
+                android:background="?android:selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_notifications"
                 app:tint="@color/foreground" />
 
@@ -35,11 +36,11 @@
                 android:src="@drawable/ic_thinker"
                 app:tint="@color/foreground" />
 
-            <ImageView
+            <ImageButton
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:adjustViewBounds="true"
-                android:padding="2dp"
+                android:background="?android:selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_search"
                 app:tint="@color/foreground" />
 

@@ -26,16 +26,17 @@
                 android:layout_marginTop="-4dp"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:fontFamily="@font/kanit_bold"
+                android:fontFamily="@font/kanit_extrabold"
                 android:lines="1"
                 android:text="@string/iamyajat"
                 android:textSize="18sp" />
 
 
-            <ImageView
+            <ImageButton
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:adjustViewBounds="true"
+                android:background="?android:selectableItemBackgroundBorderless"
                 android:padding="2dp"
                 android:src="@drawable/ic_settings"
                 app:tint="@color/foreground" />
@@ -48,13 +49,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="?actionBarSize"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -124,13 +124,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="-4dp"
-                app:cardCornerRadius="20dp">
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/posts_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:nestedScrollingEnabled="false"
+                    android:paddingBottom="100dp"
                     tools:listitem="@layout/item_card_image" />
 
             </com.google.android.material.card.MaterialCardView>
