@@ -39,6 +39,7 @@
                 android:background="?android:selectableItemBackgroundBorderless"
                 android:padding="2dp"
                 android:src="@drawable/ic_settings"
+                android:tooltipText="@string/title_settings"
                 app:tint="@color/foreground" />
 
 

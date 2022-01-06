@@ -38,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/add"
+        android:tooltipText="@string/add"
         app:elevation="2dp"
         app:layout_anchor="@id/bottomAppBar"
         app:srcCompat="@drawable/ic_add" />
