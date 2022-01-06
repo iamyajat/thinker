@@ -2,7 +2,7 @@ package com.dscvit.thinker.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.dscvit.thinker.R
 import com.dscvit.thinker.databinding.ActivityMainBinding
@@ -23,8 +23,9 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = binding.bottomNavigationView
         navView.menu.findItem(R.id.dummy).isEnabled = false
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
 
-        navView.setupWithNavController(navController)
+        navView.setupWithNavController(navHostFragment.navController)
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">THINKER</string>
+    <string name="app_name">Thinker</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -7,4 +7,8 @@
     <string name="title_profile">Profile</string>
     <string name="title_search">Search</string>
     <string name="flash_cards">Flash Cards</string>
+    <string name="cards">Cards</string>
+    <string name="iamyajat">\@iamyajat</string>
+    <string name="yajat_malhotra">Yajat Malhotra</string>
+    <string name="edit_profile">Edit Profile</string>
 </resources>
