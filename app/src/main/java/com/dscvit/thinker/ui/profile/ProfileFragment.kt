@@ -10,6 +10,7 @@ import coil.load
 import coil.transform.CircleCropTransformation
 import com.dscvit.thinker.R
 import com.dscvit.thinker.databinding.FragmentProfileBinding
+import com.dscvit.thinker.ui.settings.SettingsModalBottomSheet
 
 class ProfileFragment : Fragment() {
 
@@ -25,11 +26,16 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        profileViewModel =
-            ViewModelProvider(this).get(ProfileViewModel::class.java)
+        profileViewModel = ViewModelProvider(this)[ProfileViewModel::class.java]
 
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+
+        val modalBottomSheet = SettingsModalBottomSheet()
+        binding.settingsButton.setOnClickListener {
+            modalBottomSheet.show(parentFragmentManager, SettingsModalBottomSheet.TAG)
+        }
 
         setupProfilePage()
 

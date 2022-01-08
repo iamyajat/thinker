@@ -34,10 +34,12 @@
 
 
             <ImageButton
+                android:id="@+id/settings_button"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:adjustViewBounds="true"
                 android:background="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="@string/title_settings"
                 android:padding="2dp"
                 android:src="@drawable/ic_settings"
                 android:tooltipText="@string/title_settings"
@@ -129,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:padding="-4dp"
                 app:cardBackgroundColor="@color/background"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="@dimen/corner_radius"
                 app:cardElevation="0dp">
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -145,6 +147,12 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/settings_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

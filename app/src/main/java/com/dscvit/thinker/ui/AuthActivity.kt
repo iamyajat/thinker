@@ -32,6 +32,7 @@ class AuthActivity : AppCompatActivity() {
             .build()
 
         googleSignInClient = GoogleSignIn.getClient(this, gso)
+        googleSignInClient.signOut()
 
         auth = Firebase.auth
 

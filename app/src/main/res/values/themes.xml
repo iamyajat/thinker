@@ -16,10 +16,16 @@
         <item name="android:windowBackground">@color/background</item>
         <item name="android:textColor">@color/foreground</item>
         <item name="android:fontFamily">@font/kanit</item>
+        <item name="android:colorEdgeEffect">@color/transparent</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
     </style>
 
     <style name="roundedImageViewRounded">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
     </style>
 </resources>
