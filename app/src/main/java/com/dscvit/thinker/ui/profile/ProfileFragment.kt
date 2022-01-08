@@ -4,10 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import coil.load
+import coil.transform.CircleCropTransformation
+import com.dscvit.thinker.R
 import com.dscvit.thinker.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
@@ -30,14 +31,38 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textProfile
-        profileViewModel.text.observe(
-            viewLifecycleOwner,
-            Observer {
-                textView.text = it
-            }
-        )
+        setupProfilePage()
+
         return root
+    }
+
+    private fun setupProfilePage() {
+        profileViewModel.apply {
+            username.observe(
+                viewLifecycleOwner, {
+                    binding.profileUsername.text = it
+                }
+            )
+            bio.observe(
+                viewLifecycleOwner, {
+                    binding.profileBio.text = it
+                }
+            )
+            name.observe(
+                viewLifecycleOwner, {
+                    binding.profileName.text = it
+                }
+            )
+            imageUrl.observe(
+                viewLifecycleOwner, {
+                    binding.profileImage.load(it) {
+                        crossfade(true)
+                        placeholder(R.drawable.circle)
+                        transformations(CircleCropTransformation())
+                    }
+                }
+            )
+        }
     }
 
     override fun onDestroyView() {
