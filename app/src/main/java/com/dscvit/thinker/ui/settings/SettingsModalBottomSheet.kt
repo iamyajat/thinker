@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.dscvit.thinker.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SettingsModalBottomSheet : BottomSheetDialogFragment() {
 
     override fun onCreateView(

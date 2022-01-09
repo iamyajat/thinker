@@ -7,8 +7,9 @@ import androidx.preference.PreferenceFragmentCompat
 import com.dscvit.thinker.R
 import com.dscvit.thinker.activity.AuthActivity
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
