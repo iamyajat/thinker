@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.dscvit.thinker.R
-import com.dscvit.thinker.ui.AuthActivity
+import com.dscvit.thinker.activity.AuthActivity
 import com.google.firebase.auth.FirebaseAuth
 
 

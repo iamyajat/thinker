@@ -1,5 +1,6 @@
-package com.dscvit.thinker.ui
+package com.dscvit.thinker.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
@@ -27,5 +28,11 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
 
         navView.setupWithNavController(navHostFragment.navController)
+
+        binding.createDeckButton.setOnClickListener {
+            val createDeckIntent = Intent(this, SearchDeckActivity::class.java)
+            startActivity(createDeckIntent)
+        }
     }
+
 }
