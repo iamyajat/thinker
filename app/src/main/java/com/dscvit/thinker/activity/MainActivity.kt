@@ -30,8 +30,7 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navHostFragment.navController)
 
         binding.createDeckButton.setOnClickListener {
-            val createDeckIntent = Intent(this, SearchDeckActivity::class.java)
-            startActivity(createDeckIntent)
+            navHostFragment.navController.navigate(R.id.navigation_search_topic)
         }
     }
 

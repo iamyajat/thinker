@@ -28,7 +28,7 @@ class SearchResultsAdapter(
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val searchResult = searchResults[position]
-        viewHolder.resultTextView.text = searchResult.title
+        viewHolder.resultTextView.text = searchResult.index.toString() + " - " + searchResult.title
         viewHolder.itemView.setOnClickListener {
             val browserIntent = Intent(
                 Intent.ACTION_VIEW,

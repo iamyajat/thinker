@@ -5,6 +5,7 @@
     <string name="title_settings">Settings</string>
     <string name="title_profile">Profile</string>
     <string name="title_search">Search</string>
+    <string name="title_search_topic">Search Topic</string>
     <string name="add">Create Deck</string>
     <string name="flash_cards">Trending</string>
     <string name="cards">My Decks</string>

@@ -14,14 +14,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:background="@color/background"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:padding="12dp">
 
             <ImageButton
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:id="@+id/notifications_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:adjustViewBounds="true"
                 android:background="?android:selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_notifications"
@@ -30,16 +31,17 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="24dp"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:padding="5dp"
+                android:padding="8dp"
                 android:src="@drawable/ic_thinker"
                 app:tint="@color/foreground" />
 
             <ImageButton
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:id="@+id/search_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:adjustViewBounds="true"
                 android:background="?android:selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_search"

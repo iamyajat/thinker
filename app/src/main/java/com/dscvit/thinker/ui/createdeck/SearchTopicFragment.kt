@@ -1,13 +1,16 @@
 package com.dscvit.thinker.ui.createdeck
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dscvit.thinker.R
 import com.dscvit.thinker.adapter.SearchResultsAdapter
 import com.dscvit.thinker.databinding.FragmentSearchTopicBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -45,6 +48,8 @@ class SearchTopicFragment : Fragment() {
                             dataSetChange(it)
                             notifyDataSetChanged()
                         }
+                    } else {
+                        binding.searchResultsRecyclerView.visibility = View.GONE
                     }
                 }
             )
@@ -67,8 +72,14 @@ class SearchTopicFragment : Fragment() {
         return root
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        requireActivity().findViewById<CoordinatorLayout>(R.id.home_screen).visibility = View.GONE
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
+        requireActivity().findViewById<CoordinatorLayout>(R.id.home_screen).visibility = View.VISIBLE
         _binding = null
     }
 }

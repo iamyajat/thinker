@@ -1,5 +1,6 @@
 package com.dscvit.thinker.ui.home
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import com.dscvit.thinker.R
 import com.dscvit.thinker.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -29,15 +32,16 @@ class HomeFragment : Fragment() {
     ): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(
-            viewLifecycleOwner,
-            Observer {
-                textView.text = it
-            }
-        )
+        setupHomeUI()
         return root
+    }
+
+    private fun setupHomeUI() {
+        binding.apply {
+            notificationsButton.setOnClickListener {
+                it.findNavController().navigate(R.id.action_navigation_home_to_navigation_notifications)
+            }
+        }
     }
 
     override fun onDestroyView() {

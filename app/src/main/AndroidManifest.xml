@@ -11,12 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ThinkerApp">
         <activity
-            android:name=".activity.SearchDeckActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.CreateDeckActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity.AuthActivity"
             android:exported="true">
             <intent-filter>

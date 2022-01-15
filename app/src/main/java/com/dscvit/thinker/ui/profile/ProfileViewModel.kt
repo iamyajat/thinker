@@ -16,7 +16,8 @@ class ProfileViewModel @Inject constructor() : ViewModel() {
     private val firebaseUser: FirebaseUser = Firebase.auth.currentUser!!
 
     private val _username = MutableLiveData<String>().apply {
-        val u = "iamyajat"
+        val email = firebaseUser.email
+        val u = email!!.substring(0, email.indexOf('@'))
         value = "@$u"
     }
     val username: LiveData<String> = _username

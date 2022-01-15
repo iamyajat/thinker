@@ -34,7 +34,7 @@ class SearchTopicViewModel @Inject constructor(
                         }?.toMap()
                     _searchResponse.postValue(sortedMap?.values?.toList())
                 } else {
-                    // TODO show error message
+                    _searchResponse.postValue(null)
                 }
             }
         }

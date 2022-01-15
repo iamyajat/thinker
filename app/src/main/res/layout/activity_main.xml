@@ -13,35 +13,40 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph" />
 
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/home_screen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:backgroundTint="@color/background"
-        app:contentInsetStart="0dp">
+        android:layout_height="match_parent">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/transparent"
-            android:paddingHorizontal="20dp"
-            app:elevation="0dp"
-            app:labelVisibilityMode="unlabeled"
-            app:menu="@menu/bottom_nav_menu" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/background"
+            app:contentInsetStart="0dp">
 
-    </com.google.android.material.bottomappbar.BottomAppBar>
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:paddingHorizontal="20dp"
+                app:elevation="0dp"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/bottom_nav_menu" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/create_deck_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/add"
-        android:tooltipText="@string/add"
-        app:elevation="2dp"
-        app:layout_anchor="@id/bottomAppBar"
-        app:srcCompat="@drawable/ic_add" />
+        </com.google.android.material.bottomappbar.BottomAppBar>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/create_deck_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/add"
+            android:tooltipText="@string/add"
+            app:elevation="2dp"
+            app:layout_anchor="@id/bottomAppBar"
+            app:srcCompat="@drawable/ic_add" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
